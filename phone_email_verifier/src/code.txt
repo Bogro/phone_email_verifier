@@ -1,316 +1,158 @@
-
-Afrique du Sud, +27,
-
-Algerie, +213,
-
-Allemagne, +49,
-
-Angola, +244,
-
-Anguilla, +1264,
-
-Antigua-et-Barbuda, +1268,
-
-Antilles néerlandaises, +599,
-
-Arabie Saoudite, +966,
-
-Arménie, +374,
-
-Aruba, +297,
-
-Australie, +61,
-
-Autres pays, +ND,
-
-Autriche, +43,
-
-Bahamas, +1242,
-
-Bahreïn, +973,
-
-Bangladesh, +880,
-
-Barbade, +1246,
-
-Belgique, +32,
-
-Bermudes, +1441,
-
-Bhoutan, +975,
-
-Bolivie, +591,
-
-Bosnie-Herzégovine, +387,
-
-Botswana, +267,
-
-Brunei, +673,
-
-Brésil, +55,
-
-Bulgarie, +359,
-
-Burkina Faso, +226,
-
-Burundi, +257,
-
-Bélarus, +375,
-
-Bénin, +229,
-
-Cambodge, +855,
-
-Cameroun, +237,
-
-Chili, +56,
-
-Chine, +86,
-
-Corée du Sud, +82,
-
-Croatie, +385,
-
-Côte-d'Ivoire, +225,
-
-Danemark, +45,
-
-Egypte, +20,
-
-Emirats arabes unis, +971,
-
-Espagne, +34,
-
-Estonie, +372,
-
-Finlande, +358,
-
-France, +33,
-
-Gambie, +220,
-
-Georgie, +995,
-
-Ghana, +233,
-
-Gibraltar, +350,
-
-Groenland, +299,
-
-Grèce, +30,
-
-Guadeloupe, +590,
-
-Guatemala, +502,
-
-Guinée, +224,
-
-Guinée Bissau, +245,
-
-Guinée équatoriale, +240,
-
-Guyane, +592,
-
-Guyane française, +594,
-
-Haïti, +509,
-
-Honduras, +504,
-
-Hong Kong, +852,
-
-Hongrie, +36,
-
-Ile de la Réunion, +262,
-
-Iles du Cap Vert, +238,
-
-Iles Fidji, +679,
-
-Iles Féroé, +298,
-
-Iles Turques et Caïques, +1649,
-
-Iles Vierges, +1340,
-
-Inde, +91,
-
-Indonésie, +62,
-
-Iran, +98,
-
-Irlande, +353,
-
-Islande, +354,
-
-Israël, +972,
-
-Italie, +39,
-
-Japon, +81,
-
-Kenya, +254,
-
-Kirghizistan, +996,
-
-Koweit, +965,
-
-Laos, +856,
-
-Lesotho, +266,
-
-Lettonie, +371,
-
-Liban, +961,
-
-Libye, +218,
-
-Liechtenstein, +423,
-
-Lituanie, +370,
-
-Luxembourg, +352,
-
-Macédoine, +389,
-
-Madagascar, +261,
-
-Malaisie, +60,
-
-Maldives, +960,
-
-Mali, +223,
-
-Malte, +356,
-
-Maroc, +212,
-
-Martinique, +596,
-
-Maurice, +230,
-
-Mexique, +52,
-
-Moldavie, +373,
-
-Monaco, +377,
-
-Mongolie, +976,
-
-Montserrat, +1664,
-
-Monténégro, +382,
-
-Mozambique, +258,
-
-Namibie, +264,
-
-Nicaragua, +505,
-
-Nigeria, +234,
-
-Norvège, +47,
-
-Nouvelle Zélande, +64,
-
-Népal, +977,
-
-Oman, +968,
-
-Ouganda, +256,
-
-Ouzbékistan, +998,
-
-Pakistan, +92,
-
-Panama, +507,
-
-Papouasie Nouvelle Guinée, +675,
-
-Paraguay, +595,
-
-Pays-Bas, +31,
-
-Philippines, +63,
-
-Pologne, +48,
-
-Portugal, +351,
-
-Roumanie, +40,
-
-Royaume-Uni, +44,
-
-Russie et Kazakhstan, +7,
-
-République centrafricaine, +236,
-
-République dominicaine, +1809,
-
-République du Niger, +227,
-
-République Démocratique Congo, +242,
-
-République tchèque, +420,
-
-Saint-Christophe-et-Niévès, +1869,
-
-Saint-Vincent, +1784,
-
-Sainte-Lucie, +1758,
-
-Salvador, +503,
-
-Sao Tomé, +239,
-
-Serbie, +381,
-
-Sierra Leone, +232,
-
-Singapour, +65,
-
-Slovénie, +386,
-
-Soudan, +249,
-
-Sri Lanka, +94,
-
-Suisse, +41,
-
-Suède, +46,
-
-Swaziland, +268,
-
-Syrie, +963,
-
-Sénégal, +221,
-
-Tadjikistan, +992,
-
-Taiwan, +886,
-
-Tchad, +235,
-
-Thaïlande, +66,
-
-Timor oriental, +670,
-
-Togo, +228,
-
-Trinité et Tobago, +1868,
-
-Tunisie, +216,
-
-Turquie, +90,
-
-Ukraine, +380,
-
-Venezuela, +58,
-
-Viêt Nam, +84,
-
-Yémen, +967,
-
-Zambie, +260,
-
-Zimbabwe, +263,
+Afrique du Sud,,+27,
+Algerie,,+213,
+Allemagne,,+49,
+Angola,,+244,
+Anguilla,,+1264,
+Antigua-et-Barbuda,,+1268,
+Antilles néerlandaises,,+599,
+Arabie Saoudite,,+966,
+Arménie,,+374,
+Aruba,,+297,
+Australie,,+61,
+Autres pays,,+ND,
+Autriche,,+43,
+Bahamas,,+1242,
+Bahreïn,,+973,
+Bangladesh,,+880,
+Barbade,,+1246,
+Belgique,,+32,
+Bermudes,,+1441,
+Bhoutan,,+975,
+Bolivie,,+591,
+Bosnie-Herzégovine,,+387,
+Botswana,,+267,
+Brunei,,+673,
+Brésil,,+55,
+Bulgarie,,+359,
+Burkina Faso,BF,+226,
+Burundi,,+257,
+Bélarus,,+375,
+Bénin,,+229,
+Cambodge,,+855,
+Cameroun,,+237,
+Chili,,+56,
+Chine,,+86,
+Corée du Sud,,+82,
+Croatie,,+385,
+Côte d'Ivoire,CI,+225,
+Danemark,,+45,
+Egypte,EGY,+20,
+Emirats arabes unis,,+971,
+Espagne,ESP,+34,
+Estonie,,+372,
+Finlande,,+358,
+France,FR,+33,
+Gambie,,+220,
+Georgie,,+995,
+Ghana,,+233,
+Gibraltar,,+350,
+Groenland,,+299,
+Grèce,,+30,
+Guadeloupe,,+590,
+Guatemala,,+502,
+Guinée,,+224,
+Guinée Bissau,,+245,
+Guinée équatoriale,,+240,
+Guyane,,+592,
+Guyane française,,+594,
+Haïti,,+509,
+Honduras,,+504,
+Hong Kong,,+852,
+Hongrie,,+36,
+Ile de la Réunion,,+262,
+Iles du Cap Vert,,+238,
+Iles Fidji,,+679,
+Iles Féroé,,+298,
+Iles Turques et Caïques,,+1649,
+Iles Vierges,,+1340,
+Inde,,+91,
+Indonésie,,+62,
+Iran,,+98,
+Irlande,,+353,
+Islande,,+354,
+Israël,,+972,
+Italie,ITA,+39,
+Japon,JAP,+81,
+Kenya,,+254,
+Kirghizistan,,+996,
+Koweit,,+965,
+Laos,,+856,
+Lesotho,,+266,
+Lettonie,,+371,
+Liban,,+961,
+Libye,,+218,
+Liechtenstein,,+423,
+Lituanie,,+370,
+Luxembourg,,+352,
+Macédoine,,+389,
+Madagascar,,+261,
+Malaisie,,+60,
+Maldives,,+960,
+Mali,,+223,
+Malte,,+356,
+Maroc,,+212,
+Martinique,,+596,
+Maurice,,+230,
+Mexique,,+52,
+Moldavie,,+373,
+Monaco,,+377,
+Mongolie,,+976,
+Montserrat,,+1664,
+Monténégro,,+382,
+Mozambique,,+258,
+Namibie,,+264,
+Nicaragua,,+505,
+Nigeria,,+234,
+Norvège,,+47,
+Nouvelle Zélande,,+64,
+Népal,,+977,
+Oman,,+968,
+Ouganda,,+256,
+Ouzbékistan,,+998,
+Pakistan,,+92,
+Panama,,+507,
+Papouasie Nouvelle Guinée,,+675,
+Paraguay,,+595,
+Pays-Bas,,+31,
+Philippines,,+63,
+Pologne,,+48,
+Portugal,,+351,
+Roumanie,,+40,
+Royaume-Uni,,+44,
+Russie et Kazakhstan,,+7,
+République centrafricaine,,+236,
+République dominicaine,,+1809,
+République du Niger,,+227,
+République Démocratique Congo,,+242,
+République tchèque,,+420,
+Saint-Christophe-et-Niévès,,+1869,
+Saint-Vincent,,+1784,
+Sainte-Lucie,,+1758,
+Salvador,,+503,
+Sao Tomé,,+239,
+Serbie,,+381,
+Sierra Leone,,+232,
+Singapour,,+65,
+Slovénie,,+386,
+Soudan,,+249,
+Sri Lanka,,+94,
+Suisse,,+41,
+Suède,,+46,
+Swaziland,,+268,
+Syrie,,+963,
+Sénégal,,+221,
+Tadjikistan,,+992,
+Taiwan,,+886,
+Tchad,,+235,
+Thaïlande,,+66,
+Timor oriental,,+670,
+Togo,TOG,+228,
+Trinité et Tobago,,+1868,
+Tunisie,,+216,
+Turquie,,+90,
+Ukraine,,+380,
+Venezuela,,+58,
+Viêt Nam,,+84,
+Yémen,,+967,
+Zambie,,+260,
+Zimbabwe,,+263,

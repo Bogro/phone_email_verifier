@@ -6,8 +6,14 @@ from .treatment import Treatment
 class Treatment_email(Treatment):
 
     def __init__(self, contacts, other=None):
-        Treatment.__init__(self, contacts, other=other)
-        self.regex_email = re.compile(r"^[a-z0-9._-]+@[a-z0-9._-]+\.[a-zA-z]{2,3}\Z")
+        Treatment.__init__(self, contacts)
+        
+        if type(other) is str :
+            country = "[" + other.lower() + "]"
+        else:
+            country = "[a-zA-z]{2,3}\Z"
+
+        self.regex = re.compile(r"^[a-z0-9._-]+@[a-z0-9._-]+\." + country)
     
     def generate_email_list(self):
 
@@ -21,4 +27,4 @@ class Treatment_email(Treatment):
 
 
     def filter_email(self, contact):
-        return True if self.regex_email.match(contact) is not None else False
+        return True if self.regex.match(contact) is not None else False
