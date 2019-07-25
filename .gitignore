@@ -1,8 +1,9 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+phone_email_verifier/__pycache__/
 *.py[cod]
 *$py.class
-
+main.py
 # C extensions
 *.so
 
@@ -23,7 +24,7 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-MANIFEST
+#MANIFEST
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
