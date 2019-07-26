@@ -1,5 +1,7 @@
 #! -*- Encoding: utf-8 -*-
 
+import re
+
 from .ProcessException import ProcessException
 from .treatment_email import Treatment_email as Email
 from .treatment_phone import Treatement_phone as Phone
@@ -39,16 +41,46 @@ class Index(object):
         Qui permet de recupérer les information pour la 
         verification des contacts de la list
         '''
+
         try:
+            success = 0
+
+            if country is not None and indicative_code is not None:
+                with open('phone_email_verifier/src/code.txt', encoding='utf-8') as country_info:
+                    for ligne in country_info:
+                        info = ligne.split(',')
+                        if country == info[1] and re.match(r'^[\\' + info[2] + ']{2,4}', indicative_code) is not None:
+                            success = 0
+                            break
+                        success +=1
+                    
+            
+            if success > 0:
+                raise Exception('The country does not match this code')
+                        
             self.contact_is_list(phone)#appel de la method contact_is_list
+
             self.phone = phone
+
             self.country = country
-            self.indicative_code = indicative_code
+
+            self.indicative_code = self.get_code(country) if country is not None and indicative_code is None else indicative_code
+            
             self.specificity = specificity
+
         except Exception as e:
             print(f'ERROR in program: \n {e}')
         
     
+    def get_code(self, country):
+        with open('phone_email_verifier/src/code.txt', encoding='utf-8') as country_info:
+            for ligne in country_info:
+                info = ligne.split(',')
+                if country == info[1]:
+                    return info[2]
+
+        raise Exception('the country to select does not have its code identify in our data')
+
     def set_email_list(self, email, country=None):
         '''
         Methode
@@ -86,7 +118,7 @@ class Index(object):
                 return dict(
                     OK=treatment_phone.get_contact_success_list(),
                     ERROR=treatment_phone.get_contact_error_list(),
-                    ORL=treatment_phone.get_contact_old_list()
+                    OLD=treatment_phone.get_contact_old_list()
                 )
         else:
             return 0
