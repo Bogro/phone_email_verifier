@@ -1,2 +1,3 @@
-# phone_email_verifier
+# PHONE & EMAIL Verifier
+
  Validation of the email or international or local telephone number
