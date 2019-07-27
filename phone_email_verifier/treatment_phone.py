@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 #! -*- Encoding: utf-8 -*-
 
 import re
@@ -9,10 +10,10 @@ class Treatement_phone(Treatment):
     def __init__(self, contacts, other=None):
         Treatment.__init__(self, contacts)
         self.other = other
-        self.regex = re.compile(r"[\+\d]{6}")
+        self.regex = re.compile(r'[\+\d]{6,15}\Z')
     
     def generate_phone_list(self):
-        old_contacts = [ re.sub(r"[/ _-]", "", phone) for phone in self.contacts[:]]
+        old_contacts = [re.sub(r"[/ _-]", "", phone) for phone in self.contacts[:]]
         for contact in old_contacts:
             if self.filter_phone(contact):
                 self.new_contacts.append(contact)
@@ -46,13 +47,10 @@ class Treatement_phone(Treatment):
 
         try:
             if self.regex.match(contact) is not None:
-                
                 if self.other['country'] is None:
                     return self.filter_by_all_country(contact)
                 else:
                     return self.filter_by_code(contact, self.other['country'], self.other['indicative_code'])
-                        
-
             else:
                 return False
                 

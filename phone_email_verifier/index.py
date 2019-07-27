@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 #! -*- Encoding: utf-8 -*-
 
 import re
@@ -93,7 +94,11 @@ class Index(object):
             self.country = country if country is not None else None 
         except Exception as e:
             print(f'ERROR in program: \n {e}')
-        
+
+    
+    def set_phone_in_file(self, file, extension, country=None, indicative_code=None, specificity=None):
+        pass
+
 
     def treatment_selected(self):
         '''
