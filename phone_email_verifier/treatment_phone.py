@@ -6,8 +6,15 @@ from .treatment import Treatment
 from .ProcessException import ProcessException
 
 class Treatement_phone(Treatment):
-    
+    '''
+    Object Treatement_phone
+    Qui faire le filtre sur les numéro de téléphone
+    '''
+
     def __init__(self, contacts, other=None):
+        '''
+        Constructor
+        '''
         Treatment.__init__(self, contacts)
         self.other = other
         self.regex = re.compile(r'[\+\d]{6,15}\Z')

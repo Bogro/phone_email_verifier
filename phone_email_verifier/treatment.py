@@ -4,8 +4,14 @@
 import re
 
 class Treatment(object):
-
+    '''
+    Object Treatment
+    Objet de traitement général sur les contact(e-mail, phone)
+    '''
     def __init__(self, contacts, other=None):
+        '''
+        Constructor
+        '''
         self.error_contacts = list()
         self.new_contacts = list()
         self.contacts = contacts

@@ -2,4 +2,8 @@
 #! -*- Encoding: utf-8 -*-
 
 class ProcessException(Exception):
+    '''
+    Oject ProcessException
+    Exception
+    '''
     pass

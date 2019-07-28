@@ -76,7 +76,9 @@ class phone_email_verifier(object):
     
     def get_code(self, country):
         '''
-        
+        Method get_code
+        Charger de donner le code indicatif d'un pays
+        selectionner 
         '''
         with open('phone_email_verifier/src/code.txt', encoding='utf-8') as country_info:
             for ligne in country_info:
@@ -89,7 +91,7 @@ class phone_email_verifier(object):
     def set_email_list(self, email, country=None):
         '''
         Methode
-        Qui permet de recupérer les information pour la 
+        Qui permet de recupérer les informations pour la 
         verification des contacts de la list
         '''
         try:
@@ -101,7 +103,11 @@ class phone_email_verifier(object):
 
     
     def set_phone_in_file(self, file, country=None, indicative_code=None, colum=None):
-        
+        '''
+        Method set_phone_in_file
+        Permet de rechercher des numéro dans un fichier "TXT" ou "CSV"
+        Pour la vérification
+        '''
         try:
             ext = file.split('.')
             ext = ext[len(ext) - 1:]
@@ -143,7 +149,6 @@ class phone_email_verifier(object):
                 return dict(
                     OK=treatment_email.get_contact_success_list(),
                     ERROR=treatment_email.get_contact_error_list()
-                    #OLD=treatment_email.get_contact_old_list()
                 )
             else:
                 treatment_phone = Phone(self.phone, dict(country=self.country, indicative_code=self.indicative_code, specificity=self.specificity))
@@ -151,7 +156,6 @@ class phone_email_verifier(object):
                 return dict(
                     OK=treatment_phone.get_contact_success_list(),
                     ERROR=treatment_phone.get_contact_error_list()
-                    #OLD=treatment_phone.get_contact_old_list()
                 )
         else:
             return 0
