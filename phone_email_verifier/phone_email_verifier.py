@@ -9,9 +9,9 @@ from .treatment_email import Treatment_email as Email
 from .treatment_phone import Treatement_phone as Phone
 
 
-class Index(object):
+class phone_email_verifier(object):
     '''
-    Object index 
+    Object phone_email_verifier 
     '''
     
     def __init__(self):
@@ -75,6 +75,9 @@ class Index(object):
         
     
     def get_code(self, country):
+        '''
+        
+        '''
         with open('phone_email_verifier/src/code.txt', encoding='utf-8') as country_info:
             for ligne in country_info:
                 info = ligne.split(',')
