@@ -6,3 +6,5 @@ phone_email_verifier/__pycache__/
 main.py
 test.*
 dist/
+build/
+phone_email_verifier.egg-info/
