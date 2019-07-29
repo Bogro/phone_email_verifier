@@ -5,3 +5,4 @@ phone_email_verifier/__pycache__/
 *$py.class
 main.py
 test.*
+dist/
