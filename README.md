@@ -6,14 +6,13 @@
 ## Install
    -------
 
-   pip install phone_email_verifier
+    pip install phone_email_verifier
 
 
 ## Usage
    -----
 
-    >>> from phone_email_verifier import 
-    >>> phone_email_verifier
+    >>> from phone_email_verifier import phone_email_verifier
 
     >>> filter = phone_email_verifier()
 
@@ -21,19 +20,41 @@
 
    ### E-mail
 
-appartie d'une variable 
+E-mail list
 
-    >>> filter.set_email_list()
+    email = ['test@mail.tx', 'demo@mail.test', 'e.mail@mailer.com']
+
+    >>> filter.set_email_list(email, )
 
     >>> filter.exec()
+
+    {'OK': ['test@mail.tx', 'e.mail@mailer.com'], 'ERROR': ['demo@mail.test']}
 
    ### Phone
 
-appartie d'une variable 
+Number phone list 
     
-    >>> filter.set_phone_list()
+    #simple use
 
-    # appartie d'un fichier
-    >>> filter.set_phone_in_file()
+    phone = ['+22547000000', '+225-47-00-00-00', '+225 47 00 00 00 00', '+33 00 25 00 11 00', '47 02 00 00']
+
+    >>> filter.set_phone_list(phone)
+
+    {'OK': ['+22547000000', '+22547000000', '+2254700000000', '+330025001100'], 'ERROR': ['47020000']}
+
+
+
+appartie d'un fichier
+
+    #simple use of a contact list
+
+    name_list = list_phone.csv
+
+    >>> filter.set_phone_in_file(name_list, colum=0) # colum is column of numbers
 
     >>> filter.exec()
+
+    {'OK': ['+22547000000', '22547000010'], 'ERROR': ['030020585', '4578', '33024558452', '55552222', '658945898']}
+
+
+It is important to specify the number column when the file is a csv file.

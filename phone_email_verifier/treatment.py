@@ -6,7 +6,7 @@ import re
 class Treatment(object):
     '''
     Object Treatment
-    Objet de traitement général sur les contact(e-mail, phone)
+    Object of general treatment on contact (e-mail, phone)
     '''
     def __init__(self, contacts, other=None):
         '''
