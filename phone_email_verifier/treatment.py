@@ -1,10 +1,17 @@
+#!/usr/bin/env python3
 #! -*- Encoding: utf-8 -*-
 
 import re
 
 class Treatment(object):
-
+    '''
+    Object Treatment
+    Object of general treatment on contact (e-mail, phone)
+    '''
     def __init__(self, contacts, other=None):
+        '''
+        Constructor
+        '''
         self.error_contacts = list()
         self.new_contacts = list()
         self.contacts = contacts
