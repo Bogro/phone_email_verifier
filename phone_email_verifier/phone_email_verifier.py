@@ -30,10 +30,9 @@ class phone_email_verifier(object):
         
     def contact_is_list(self, contact):
         '''
-        Methode 
-        Qui permet de faire la verification sur une list de contact
-        is contact n'est pas une list 
-        Une exception est enclancher
+        contact_is_list 
+        Who can do the check on a contact list
+        if contact is not a list an exception is clipped
         '''
         try:
             if type(contact) is not list:
@@ -43,9 +42,8 @@ class phone_email_verifier(object):
 
     def set_phone_list(self, phone, country=None, indicative_code=None, specificity=None):
         '''
-        Methode
-        Qui permet de recupérer les information pour la 
-        verification des contacts de la list
+        set_phone_list
+        Which retrieves the information for the verification of the contacts of the list
         '''
 
         try:
@@ -80,9 +78,8 @@ class phone_email_verifier(object):
     
     def get_code(self, country):
         '''
-        Method get_code
-        Charger de donner le code indicatif d'un pays
-        selectionner 
+        get_code
+        Load to give the code of a selected country
         '''
         with open(func.get_dict_code_name(), encoding='utf-8') as country_info:
             for ligne in country_info:
@@ -95,8 +92,7 @@ class phone_email_verifier(object):
     def set_email_list(self, email, country=None):
         '''
         Methode
-        Qui permet de recupérer les informations pour la 
-        verification des contacts de la list
+        Retrieves information for checking list contacts
         '''
         try:
             self.contact_is_list(email)#appel de la method contact_is_list
@@ -108,12 +104,11 @@ class phone_email_verifier(object):
     
     def set_phone_in_file(self, file, country=None, indicative_code=None, colum=None):
         '''
-        Method set_phone_in_file
-        Permet de rechercher des numéro dans un fichier "TXT" ou "CSV"
-        Pour la vérification
-        :country, permet de selectionner le pays Ex: CI, FR, ...
-        :indicative_code, code indicatif du pays pas obligatoire
-        :colum, permet de dire dans quel colonne se situe le numéro si le fichier est un CSV
+        set_phone_in_file 
+        Search for numbers in a "TXT" or "CSV" file for verification
+        :country, choose country Ex: CI, FR, ...
+        :indicative_code, country code not required
+        :colum, the column where the number is if the file is a CSV
         '''
         try:
             ext = file.split('.')
@@ -139,11 +134,10 @@ class phone_email_verifier(object):
 
     def set_email_in_file(self, file, country=None, colum=None):
         '''
-        Method set_email_in_file
-        Permet de rechercher des numéro dans un fichier "TXT" ou "CSV"
-        Pour la vérification
-        :country, vous permet de selectionner le pays Ex: .ci, .fr ...
-        :colum, permet de dire dans quel colonne se situe le email si le fichier est un CSV
+        set_email_in_file 
+        Search for numbers in a "TXT" or "CSV" file for verification
+        :country, choose country Ex: CI, FR, ...
+        :colum, the column where the number is if the file is a CSV
         '''
         try:
             ext = file.split('.')
@@ -178,7 +172,7 @@ class phone_email_verifier(object):
     def treatment_selected(self):
         '''
         Methode
-        Qui permet de faire une selection de traitement
+        A selection of treatment
         '''
         return True if self.email is not None else False
 

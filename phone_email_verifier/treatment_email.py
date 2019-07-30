@@ -45,6 +45,5 @@ class Treatment_email(Treatment):
     def filter_email(self, contact):
         '''
         Method filter_email
-        Verifie si le mail est bien formaté
         '''
         return True if self.regex.match(contact) is not None else False
