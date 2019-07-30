@@ -6,7 +6,7 @@ with open('README.md', 'r', encoding='utf-8') as readme:
 
 setup(
     name='phone_email_verifier',
-    version='0.0.1',
+    version='0.0.3',
     description='Validation of the email or international or local telephone number',
     long_description=long_description,
     long_description_content_type="text/markdown",
