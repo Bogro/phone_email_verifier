@@ -1,16 +1,29 @@
 # PHONE & EMAIL Verifier
 
 ## Description
- Validation of the email or international or local telephone number
+ Validation of the email or international or local telephone number.
 
 ## Install
-   -------
+
+If you install with
 
     pip install phone_email_verifier
 
 
+1 : Download here https://github.com/Bogro/phone_email_verifier/blob/develop/phone_email_verifier/code.txt and drop it at the root of your project.
+
+2 : Add the phone code dictionary path in the .env of your project.
+    
+    #.env
+    DICT_CODE="dict_name.txt"
+
+Note: This file is important for checking phone numbers
+
+
+For direct downloads on github you do not need to follow the process above
+
 ## Usage
-   -----
+
 
     >>> from phone_email_verifier import phone_email_verifier
 

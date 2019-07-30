@@ -2,8 +2,14 @@
 #! -*- Encoding: utf-8 -*-
 
 import re
-from .treatment import Treatment
-from .ProcessException import ProcessException
+
+try:
+    from .function import function as func
+    from .treatment import Treatment
+    from .ProcessException import ProcessException
+except ImportError as IE:
+    print(f"ERROR: {IE}")
+
 
 class Treatement_phone(Treatment):
     '''
@@ -28,7 +34,7 @@ class Treatement_phone(Treatment):
                 self.error_contacts.append(contact)
 
     def filter_by_all_country(self, contact):
-        with open('phone_email_verifier/code.txt', encoding='utf-8') as country_info:
+        with open(func.get_dict_code_name(), encoding='utf-8') as country_info:
             for ligne in country_info:
                 regex = f"(^\\{ligne.split(',')[2]})"
                 reg = re.compile(regex)
@@ -43,7 +49,7 @@ class Treatement_phone(Treatment):
             if re.match(regex, contact) is not None:
                 return True
         else:
-            with open('phone_email_verifier/code.txt', encoding='utf-8') as country_info:
+            with open(func.get_dict_code_name(), encoding='utf-8') as country_info:
                 for ligne in country_info:
                     if country.upper() in ligne:
                         if re.match(r'^(\\' + ligne.split(',')[2] + ')', contact) is not None:
