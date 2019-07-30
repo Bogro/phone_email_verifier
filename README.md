@@ -1,4 +1,4 @@
-# PHONE & EMAIL Verifier
+# PHONE & EMAIL Verifier V0.0.3
 
 ## Description
  Validation of the email or international or local telephone number.

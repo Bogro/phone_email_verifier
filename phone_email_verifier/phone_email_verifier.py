@@ -111,6 +111,9 @@ class phone_email_verifier(object):
         Method set_phone_in_file
         Permet de rechercher des numéro dans un fichier "TXT" ou "CSV"
         Pour la vérification
+        :country, permet de selectionner le pays Ex: CI, FR, ...
+        :indicative_code, code indicatif du pays pas obligatoire
+        :colum, permet de dire dans quel colonne se situe le numéro si le fichier est un CSV
         '''
         try:
             ext = file.split('.')
@@ -124,20 +127,54 @@ class phone_email_verifier(object):
                     self.phone = [phone.split(',')[0] for phone in contact_of_file]
                 
                 self.country = country
-
                 self.indicative_code = self.get_code(country) if country is not None and indicative_code is None else indicative_code
                 
             elif ext[0].upper() == 'CSV':
-                with open(file, newline='') as contact_of_file:
-                    phones = csv.reader(contact_of_file)
-                    if colum is not None:
-                        self.phone = [phone[0] for phone in phones]
-                    else:
-                        self.phone = [phone[colum] for phone in phones]
+                self.phone = self.get_contact_of_file(file, colum)
+                self.country = country
+                self.indicative_code = self.get_code(country) if country is not None and indicative_code is None else indicative_code
+
         except Exception as e:
             print(f'ERROR: {e}')
 
-        
+    def set_email_in_file(self, file, country=None, colum=None):
+        '''
+        Method set_email_in_file
+        Permet de rechercher des numéro dans un fichier "TXT" ou "CSV"
+        Pour la vérification
+        :country, vous permet de selectionner le pays Ex: .ci, .fr ...
+        :colum, permet de dire dans quel colonne se situe le email si le fichier est un CSV
+        '''
+        try:
+            ext = file.split('.')
+            ext = ext[len(ext) - 1:]
+
+            if colum is not None and type(colum) is not int:
+                raise Exception('The type is not (int)')
+
+            if ext[0].upper() == 'TXT':
+                with open(file, encoding='utf-8') as contact_of_file:
+                    self.email = [email.split(',')[0] for email in contact_of_file]
+                
+                self.country = country
+                
+            elif ext[0].upper() == 'CSV':
+                self.email = self.get_contact_of_file(file, colum)
+                self.country = country
+
+        except Exception as e:
+            print(f'ERROR: {e}')
+
+    def get_contact_of_file(self, file, colum):
+        with open(file, newline='') as contact_of_file:
+            contact_list = csv.reader(contact_of_file)
+            if colum is not None:
+                contacts = [cnt[0] for cnt in contact_list]
+            else:
+                contacts = [cnt[colum] for cnt in contact_list]
+
+        return contacts
+
     def treatment_selected(self):
         '''
         Methode

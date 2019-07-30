@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #! -*- Encoding: utf-8 -*-
 
-import io
+import os
 
 class function(object):
 
@@ -19,6 +19,6 @@ class function(object):
             return dict_code
 
         except IOError:
-            return io.getenv('DICT_CODE')
+            return os.getenv('DICT_CODE')
         else:
             return None
