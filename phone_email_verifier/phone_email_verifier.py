@@ -4,16 +4,20 @@
 import re
 import csv
 
-from .ProcessException import ProcessException
-from .treatment_email import Treatment_email as Email
-from .treatment_phone import Treatement_phone as Phone
+try:
+    from .function import function as func
+    from .ProcessException import ProcessException
+    from .treatment_email import Treatment_email as Email
+    from .treatment_phone import Treatement_phone as Phone
+except ImportError as IE:
+    print(f"ERROR: {IE}")
 
 
 class phone_email_verifier(object):
     '''
     Object phone_email_verifier 
     '''
-    
+
     def __init__(self):
         '''
         Constructor 
@@ -48,7 +52,7 @@ class phone_email_verifier(object):
             success = 0
 
             if country is not None and indicative_code is not None:
-                with open('phone_email_verifier/code.txt', encoding='utf-8') as country_info:
+                with open(func.get_dict_code_name(), encoding='utf-8') as country_info:
                     for ligne in country_info:
                         info = ligne.split(',')
                         if country == info[1] and re.match(r'^[\\' + info[2] + ']{2,4}', indicative_code) is not None:
@@ -80,7 +84,7 @@ class phone_email_verifier(object):
         Charger de donner le code indicatif d'un pays
         selectionner 
         '''
-        with open('phone_email_verifier/code.txt', encoding='utf-8') as country_info:
+        with open(func.get_dict_code_name(), encoding='utf-8') as country_info:
             for ligne in country_info:
                 info = ligne.split(',')
                 if country == info[1]:

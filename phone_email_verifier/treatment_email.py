@@ -2,7 +2,12 @@
 #! -*- Encoding: utf-8 -*-
 
 import re
-from .treatment import Treatment
+
+try:
+    from .treatment import Treatment
+except ImportError as IE:
+    print(f"ERROR: {IE}")
+
 
 class Treatment_email(Treatment):
     '''
