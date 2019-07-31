@@ -57,7 +57,7 @@ Number phone list
 
 
 
-appartie d'un fichier
+a file
 
     #simple use of a contact list
 

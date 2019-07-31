@@ -22,11 +22,11 @@ class Treatment_email(Treatment):
         Treatment.__init__(self, contacts)
         
         if type(other) is str :
-            country = "[" + other.lower() + "]"
+            country = "[\." + other.lower() + "]\Z"
         else:
-            country = "[a-zA-z]{2,3}\Z"
-
-        self.regex = re.compile(r"^[a-z0-9._-]+@[a-z0-9._-]+\." + country)
+            country = "([a-zA-z]{2,3})\Z"
+        
+        self.regex = re.compile(r"^([a-z0-9._-])+@([a-z0-9._-])+" + country)
     
     def generate_email_list(self):
         '''
