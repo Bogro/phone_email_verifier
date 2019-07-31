@@ -35,11 +35,14 @@ class Treatment_email(Treatment):
 
         old_contacts = self.contacts[:]
 
-        for contact in old_contacts:
-            if self.filter_email(contact):
-                self.new_contacts.append(contact)
+        for email in old_contacts:
+            if self.filter_email(email):
+
+                if email not in self.new_contacts:
+                    self.new_contacts.append(email)
+
             else:
-                self.error_contacts.append(contact)
+                self.error_contacts.append(email)
 
 
     def filter_email(self, contact):
