@@ -1,7 +1,7 @@
 # PHONE & EMAIL Verifier
 
 ## Description
- Validation of the email or international or local telephone number.
+ Validation of the email and international or local telephone number.
 
 ## Install
 
@@ -26,7 +26,6 @@ For direct downloads on github you do not need to follow the process above
 
    ### E-mail
 
-E-mail list
 
     from phone_email_verifier.email_verifier import email_verifier as email_v
 
@@ -46,7 +45,7 @@ E-mail list
     {'OK': ['test@mail.tx', 'e.mail@mailer.com'], 'ERROR': ['demo@mail.test']}
 
 #### Remarque:
-Il est possible de faire une restricrion sur le pays en faisant:
+It is possible to make a restriction on the country by making:
 
     >>> email.set_email_list(email, 'FR')
 
@@ -54,11 +53,11 @@ Il est possible de faire une restricrion sur le pays en faisant:
 
     >>> email.set_email_in_file(file_name, 'FR')
 
-et célà ferra un filtre sur tous email se terminant pas 
+and this will make a filter on any email not ending
     
     .fr
 
-si le fichier utiliser est un CSV indique la colonne ou trouver le email
+if the file used is a CSV, indicate the column of email
 
     >>> email.set_email_in_file(file_name, colum=0)
 
@@ -73,8 +72,6 @@ si le fichier utiliser est un CSV indique la colonne ou trouver le email
 
    ### Phone
 
-Number phone list 
-    
 
     from phone_email_verifier.phone_verifier import phone_verifier as phone_v
 
@@ -98,7 +95,7 @@ Number phone list
 
 #### Advance use
 
-Il est possible d'apporté une précision avec le nom du pays et sont code indentifiant
+It is possible to make a precision with the name of the country and is identifying code
 
     >>> filter.set_phone_list(phone_list, 'FR', '+33')
 
@@ -114,59 +111,62 @@ Il est possible d'apporté une précision avec le nom du pays et sont code inden
 It is important to specify the number column when the file is a csv file.
 
 
-# Pour le dictionnaire de code identifient des pays
+# For code dictionary identify countries
 
-Vous pourvez ajouté ou reduire la liste en function de votre utilisation.
-Je vous conseille de reduire en fonction de votre utilisation, pour rendre rapide l'execution
+You can add or reduce the list according to your usage.
+I advise you to reduce according to your use, to make fast execution
 
-## Comment ajouter
+## How to add
 
-Pour ajouter, aller a la ligne et
+To add, go to the line and:
 
-le nom du pays,abreviation du nom,code identifient (+225|225|0225), longuer du numéro sans le code identifient et le code local, le code local s'il existe,
+The name of the country, abbreviation of the name, identify code (+33 | 33 | 0033), length of the number without the identified code and the local code, the local code if it exists,
 
-Exemple:
-Nom du pays
+Example:
+
+Country name
 --------------
     France
 
-Abreviation du nom
+Abbreviation country name
 ------------------
     FR
 
-Code identifient
+Identify code
 ----------------
     +33|33|0033
 
-Longueur du numéro
+Length phone number
 -----------------
     8
 
-Remarque: si le numéro peux avoir plusieurs longueur, ajouter le du plus petit au plus grand ave '|' comme separateur
+Note:
+
+If the number can be several lengths, add it in ascending order with " | " as separator
 
     6|7|8|9
 
-Le code local
+Local code
 -------------
 s'il existe 
 
     0
 
-Remarque: s'il en a plusieurs, ajouter avec '|' comme separateur
+Note: if there are more than one, add with " | " as separator
 
     0|1|2
 
-s'il existe pas la ligne se termie pas une 
+if it does not exist the line ends with a
 
     ','
 
-au final on a cette ligne 
+in the end we have this line
 
     France,FR,+33|33|0033,8,0,
 
 
 
-### Remarque final
+### Final note
 
-    *Les espaces entre les valeur sont interdite
-    *La ligne finir toujour avec un ','
+    * The spaces between the values ​​are forbidden
+    * The finished line always with a ";
